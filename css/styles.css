@@ -97,15 +97,6 @@ address {
   color: var(--accent-color);
 }
 
-.header-menu .header-link:hover:after,
-.current-page:after {
-  content: '';
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: var(--accent-color);
-}
-
 .logo {
   font-family: Raleway;
   font-weight: 700;
@@ -189,6 +180,29 @@ address {
 .header-menu-item:not(:last-child) {
   margin-right: 50px;
 }
+
+.current-page {
+  position: relative;
+}
+
+.sub-line {
+  position: absolute;
+  left: 0;
+  top: 46.85px;
+  width: 100%;
+  height: 3px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
+
+/* .header-menu .header-link:hover:after,
+.current-page:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-color);
+} */
 
 .header-contacts {
   display: flex;
@@ -332,6 +346,25 @@ address {
   margin-top: 30px;
   margin-left: 30px;
   flex-basis: calc(100% / 3 - 30px);
+}
+
+.what-we-do-thumb {
+  position: relative;
+}
+
+.what-we-do-info {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 27px 0;
+  margin-bottom: 0;
+  font-weight: 700;
+  line-height: 1.143;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: rgba(47, 48, 58, 0.8);
+  color: var(--white);
 }
 
 .team-info {
@@ -482,6 +515,7 @@ address {
 
 .works-title {
   padding: 0 24px;
+  margin-top: 20px;
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
@@ -580,8 +614,33 @@ address {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-photo {
+/* .portfolio-photo {
   margin-bottom: 20px;
+} */
+
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+  margin-bottom: 0;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--white);
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.portfolio-item:hover .portfolio-info {
+  transform: translateX(0);
 }
 
 .dark-bg {
